@@ -4,4 +4,8 @@ from django.db import models
 
 class Post(models.Model):
     title= models.CharField(max_length=20)
-    content= models.CharField()
+    content= models.CharField(max_length=40)
+
+# Megic
+    def __str__(self):
+        return self.title
